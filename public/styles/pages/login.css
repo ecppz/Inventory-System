@@ -1,0 +1,83 @@
+.container-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.card-login {
+  background-color: var(--gray);
+  padding: 40px 30px;
+  border-radius: 15px;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+}
+
+.card-login h1 {
+  margin-bottom: 25px;
+  font-size: 28px;
+  color: var(--white);
+}
+
+.form-login .form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.form-login label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--white);
+}
+
+.form-login input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(89, 89, 89);
+  background-color: var(--black);
+  color: var(--white);
+  font-size: 14px;
+}
+
+.form-login button {
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+  width: 100%;
+  transition: 0.2s;
+}
+
+.form-login button:hover {
+  transform: scale(1.02);
+}
+
+.redirect-text {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.alert-message {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+}
+
+.alert-message.danger {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.alert-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}

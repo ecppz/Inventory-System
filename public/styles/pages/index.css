@@ -1,0 +1,104 @@
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 100px auto;
+  padding: 20px 0;
+  background-color: var(--black);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 50px;
+    
+}
+
+.alert-message {
+  margin: 20px 50px;
+  padding: 10px;
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: bold;
+  animation: fadeOut 2s ease forwards;
+  animation-delay: 2s;
+  opacity: 1;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+.alert-message.added {
+    background-color: var(--green);
+}
+
+.alert-message.updated {
+    background-color: var(--blue);
+}
+
+.alert-message.deleted {
+    background-color: var(--red);
+}
+
+.agregar-product {
+    background-color: var(--white);
+    border-radius: 5px;
+    padding: 12px 20px;
+    color: var(--black);
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.editar-product, .eliminar-product {
+    padding: 10px 12px;
+    border-radius: 5px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.editar-product {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.eliminar-product {
+    background-color: var(--red);
+    color: var(--white);
+}
+
+.table {
+    margin: 20px auto;
+}
+
+table {
+    width: 100%;
+    background-color: #2C2C2C;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 50px; 
+    max-width: 1100px;
+    width: 100%;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+table th, table td {
+    padding: 15px 10px;
+    text-align: center;
+}
+
+table th {
+    font-size: 17px;
+}
+
+table td {
+    font-size: 14px;
+    border-top: 2px solid #3D3D3D;
+}

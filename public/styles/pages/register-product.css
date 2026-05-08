@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 30px auto;
+  background-color: var(--black);
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25), 0 6px 6px rgba(0, 0, 0, 0.22);
+}
+
+.card-left, .card-right {
+  flex: 1; 
+  height: auto;
+}
+
+.card-left {
+    flex: 1; 
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+}
+
+.card-right {
+    width: 100%;
+    height: auto;
+     background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.8), 
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.5)   
+    ),
+    url('/images/fondo.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px;
+}
+
+.card-form {
+    margin: 30px
+}
+
+h1{
+    margin-bottom: 20px;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    margin: 15px 0px;
+}
+
+.sections input[type="text"],
+.sections input[type="email"],
+.sections input[type="number"],
+.sections textarea {
+  background-color: var(--gray);
+  color: var(--white);
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 12px 10px;
+  border: 1px solid rgb(89, 89, 89);
+  border-radius: 5px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.sections textarea {
+    resize: none;
+    height: 80px;
+}
+
+.sections button {
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    color: var(--black);
+    font-size: 16px;
+    font-weight: bold;
+    max-width: 350px;
+}
+
+.sections button:hover {
+    background-color: #fff;
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.sections button i {
+    padding-left: 10px;
+}
+
+#formFile {
+    margin-top: 10px;
+}
+
+

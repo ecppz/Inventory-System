@@ -1,0 +1,64 @@
+<%- include('layouts/header') %>
+    <main>
+        <div class="container">
+            <div class="top-bar">
+                <h1>Inventario</h1>
+            </div>
+            <% if (message) { %>
+                <div class="alert-message <%= message.type %>">
+                    <%= message.alert %>
+                </div>
+                <% } %>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Imagen</th>
+                                    <th>Codigo</th>
+                                    <th>Articulo</th>
+                                    <th>Descripcion</th>
+                                    <th>Stock</th>
+                                    <th>Precio</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% items.forEach((item, index)=> { %>
+                                    <tr>
+                                        <td>
+                                            <%= ++index %>
+                                        </td>
+                                        <td><img src="<%= item.image%>" width="50"></td>
+                                        <td>
+                                            <%= item.codigo%>
+                                        </td>
+                                        <td>
+                                            <%= item.articulo%>
+                                        </td>
+                                        <td>
+                                            <%= item.descripcion%>
+                                        </td>
+                                        <td>
+                                            <%= item.stock%>
+                                        </td>
+                                        <td>
+                                            <%= item.precio%>
+                                        </td>
+
+                                        <td>
+                                            <a class="editar-product" href="/update/<%= item._id %>">
+                                                <i class="fas fa-pencil"></i> Editar
+                                            </a>
+                                            <a class="eliminar-product" href="/delete/<%= item._id %>">
+                                                <i class="fas fa-trash-can"></i> Eliminar
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+        </div>
+    </main>
+    <%- include('layouts/footer') %>

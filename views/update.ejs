@@ -1,0 +1,60 @@
+<%- include('layouts/header') %>
+<main>
+<div class="container">
+    <div class="card-form">
+        <form id="add-form" action="/update/<%= item._id%>" method="post" enctype="multipart/form-data"> 
+            <div class="sections">
+                <label class="form-label" for="codigo">Codigo</label>
+                <input class="form-control" value="<%=item.codigo%>" name="codigo" type="text" placeholder="Codigo del articulo">
+            </div>
+
+        <div class="sections">
+                <label class="form-label" for="articulo">Articulo</label>
+                <input class="form-control" value="<%= item.articulo %>" name="articulo" type="text" placeholder="Nombre del articulo">
+            </div>
+
+            <div class="sections">
+                <label class="form-label" for="descripcion">Descripcion</label>
+                <textarea class="form-control" value="<%= item.descripcion %>" name="descripcion" placeholder="Descripcion aqui..."></textarea>
+            </div>
+
+            <div class="sections">
+                <label class="form-label" for="stock">Stock</label>
+                <input class="form-control" value="<%= item.stock %>" name="stock" type="number" placeholder="Cantidad disponible en almacen">
+            </div>
+            
+        <div class="sections">
+                <label class="form-label" for="precio">Precio</label>
+                <input class="form-control" value="<%= item.precio %>" name="precio" type="number" placeholder="Precio del articulo">
+            </div> 
+
+            <div class="sections">
+            <label for="image">Actualizar imagen</label>
+            <input name="image" type="file">
+            </div>
+
+            <input type="hidden" name="old_image" value="<%=item.image %>">
+
+            <div class="sections">
+                <button type="submit">Actualizar<i class="fa-solid fa-arrow-right"></i>
+                </button> 
+            </div>
+        </form>
+    </div>
+
+    <div class="card-right">
+       <ul>
+            <li><img src="/<%= item.image%>" name="filename"></li>
+            <li>
+                <strong>Articulo</strong><br>
+                <span><%= item.articulo %></span>
+            </li>
+            <li>
+                <strong>Codigo</strong><br>
+                <span><%= item.codigo%></span>
+            </li>
+       </ul>
+    </div>
+    </div>
+</main>
+<%- include('layouts/footer') %>
